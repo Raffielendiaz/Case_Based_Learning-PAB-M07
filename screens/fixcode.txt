@@ -1,0 +1,24 @@
+const handleDeleteTask = (index) => {
+    const deletedList = list.filter((_, listIndex) => listIndex !== index);
+    setList(deletedList);
+
+    try {
+      AsyncStorage.setItem("@task-list", JSON.stringify(deletedList));
+    } catch (e) {
+      console.log("Error delete task: in task-all.js");
+      console.error(e.message);
+    }
+  };
+
+  const handleStatusChange = (index) => {
+    const newList = [...list];
+    newList[index].isCompleted = !newList[index].isCompleted;
+    setList(newList);
+
+    try {
+      AsyncStorage.setItem("@task-list", JSON.stringify(newList));
+    } catch (e) {
+      console.log("Error update status task: in task-all.js");
+      console.error(e.message);
+    }
+  };
