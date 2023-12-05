@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "TodoList",
+    "name": "MyTod",
     "slug": "TodoList",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icontodo.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icontodo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.raffiel.TodoList"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "60010ed2-1cd1-4326-862a-0b7e26e4497c"
+      }
     }
   }
 }
